@@ -1,0 +1,19 @@
+{
+  "name": "playwright-automation-test",
+  "version": "1.0.0",
+  "description": "Playwright 自动化测试项目",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen"
+  },
+  "keywords": ["playwright", "e2e", "testing", "automation"],
+  "author": "Purplegrape Reed",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}
