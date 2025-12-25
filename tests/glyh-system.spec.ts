@@ -19,17 +19,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('登录功能测试', async ({ page }) => {
-    // 填写用户名
-    await page.getByRole('textbox', { name: '账户名' }).fill(TEST_USER.username);
-    
-    // 填写密码
-    await page.getByRole('textbox', { name: '密码' }).fill(TEST_USER.password);
-    
-    // 填写验证码 (注意:验证码会变化,需要处理)
-    await page.getByRole('textbox', { name: '请输入验证码' }).fill('jerp');
-    
-    // 点击登录
-    await page.getByRole('button', { name: '登录' }).click();
+    await loginWithManualCaptcha(page);
     
     // 验证登录成功 - 等待地图加载
     await page.waitForLoadState('networkidle');
@@ -39,8 +29,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('地图图例交互测试', async ({ page }) => {
-    // 登录
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 打开图例
     await page.getByRole('button', { name: ' 图例' }).click();
@@ -58,7 +47,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('资产管理-路线信息查看', async ({ page }) => {
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 点击资产情况菜单
     await page.getByRole('menubar').locator('div').filter({ hasText: '资产情况' }).click();
@@ -73,7 +62,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('桥梁管理-查看详情', async ({ page }) => {
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 进入桥梁管理
     await page.getByRole('menubar').locator('div').filter({ hasText: '资产情况' }).click();
@@ -96,7 +85,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('隧道管理-查看和操作', async ({ page }) => {
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 进入隧道管理
     await page.getByRole('menubar').locator('div').filter({ hasText: '资产情况' }).click();
@@ -120,7 +109,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('附属设施管理-菜单导航', async ({ page }) => {
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 点击附属设施管理
     await page.getByRole('menuitem', { name: '附属设施管理' }).click();
@@ -137,7 +126,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('巡查养护-完整流程', async ({ page }) => {
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 进入巡查养护
     await page.getByRole('menubar').locator('div').filter({ hasText: '巡查养护' }).click();
@@ -161,7 +150,7 @@ test.describe('公路养护系统测试', () => {
   });
 
   test('桥梁巡查-检查类型切换', async ({ page }) => {
-    await login(page);
+    await loginWithManualCaptcha(page);
     
     // 进入桥梁巡查
     await page.getByRole('menubar').locator('div').filter({ hasText: '巡查养护' }).click();
@@ -179,14 +168,22 @@ test.describe('公路养护系统测试', () => {
   });
 });
 
-// 登录辅助函数
-async function login(page) {
+// 手动输入验证码的登录函数
+async function loginWithManualCaptcha(page) {
+  // 填写用户名
   await page.getByRole('textbox', { name: '账户名' }).fill(TEST_USER.username);
+  
+  // 填写密码
   await page.getByRole('textbox', { name: '密码' }).fill(TEST_USER.password);
   
-  // 注意:验证码需要手动处理或OCR识别
-  await page.getByRole('textbox', { name: '请输入验证码' }).fill('jerp');
+  console.log('⏸️  请手动输入验证码,然后按 Resume 继续...');
   
+  // 暂停等待手动输入验证码
+  await page.pause();
+  
+  // 点击登录
   await page.getByRole('button', { name: '登录' }).click();
+  
+  // 等待登录完成
   await page.waitForLoadState('networkidle');
 }
