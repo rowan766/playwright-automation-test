@@ -12,8 +12,8 @@ const TEST_USER = {
   password: 'sheng01@123456'
 };
 
-// 验证码图片选择器(可能需要调整)
-const CAPTCHA_SELECTOR = 'canvas'; // 或 '.captcha-img' 或其他
+// 验证码图片选择器 - 根据 DOM 结构确定
+const CAPTCHA_SELECTOR = '.el-image__inner'; // 或 'img[src^="data:image/png"]'
 
 test.describe('公路养护系统测试', () => {
   
@@ -132,32 +132,56 @@ test.describe('公路养护系统测试', () => {
   });
 });
 
-// 自动识别验证码登录
-async function loginWithOCR(page) {
-  try {
-    // 填写用户名密码
-    await page.getByRole('textbox', { name: '账户名' }).fill(TEST_USER.username);
-    await page.getByRole('textbox', { name: '密码' }).fill(TEST_USER.password);
-    
-    // 获取并识别验证码
-    console.log('🔍 正在识别验证码...');
-    const captchaCode = await getCaptchaFromPage(page, CAPTCHA_SELECTOR);
-    
-    // 填写验证码
-    await page.getByRole('textbox', { name: '请输入验证码' }).fill(captchaCode);
-    
-    // 点击登录
-    await page.getByRole('button', { name: '登录' }).click();
-    
-    // 等待登录完成
-    await page.waitForLoadState('networkidle', { timeout: 10000 });
-    
-    console.log('✅ 登录完成');
-  } catch (error) {
-    console.error('❌ 登录失败,可能是验证码识别错误:', error);
-    
-    // 如果 OCR 失败,回退到手动输入
-    console.log('⏸️  请手动输入验证码');
-    await page.pause();
+// 自动识别验证码登录(带重试机制)
+async function loginWithOCR(page, maxRetries = 3) {
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      console.log(`🔐 第 ${attempt} 次登录尝试...`);
+      
+      // 填写用户名密码
+      await page.getByRole('textbox', { name: '账户名' }).fill(TEST_USER.username);
+      await page.getByRole('textbox', { name: '密码' }).fill(TEST_USER.password);
+      
+      // 获取并识别验证码
+      console.log('🔍 正在识别验证码...');
+      const captchaCode = await getCaptchaFromPage(page, CAPTCHA_SELECTOR);
+      
+      console.log(`✍️  填写验证码: ${captchaCode}`);
+      await page.getByRole('textbox', { name: '请输入验证码' }).fill(captchaCode);
+      
+      // 点击登录
+      await page.getByRole('button', { name: '登录' }).click();
+      
+      // 等待登录结果
+      await page.waitForTimeout(2000);
+      
+      // 检查是否登录成功(判断是否跳转或出现错误提示)
+      const isLoginPage = await page.locator('.desktop-login').isVisible().catch(() => false);
+      
+      if (!isLoginPage) {
+        // 已经离开登录页,说明登录成功
+        await page.waitForLoadState('networkidle');
+        console.log('✅ 登录成功');
+        return;
+      }
+      
+      // 还在登录页,可能是验证码错误
+      console.log(`❌ 第 ${attempt} 次尝试失败,验证码可能识别错误`);
+      
+      if (attempt < maxRetries) {
+        // 刷新页面重试
+        await page.reload();
+        await page.waitForLoadState('networkidle');
+      }
+      
+    } catch (error) {
+      console.error(`❌ 第 ${attempt} 次尝试出错:`, error.message);
+      
+      if (attempt === maxRetries) {
+        console.log('⏸️  OCR 识别失败次数过多,请手动输入验证码');
+        await page.pause();
+        return;
+      }
+    }
   }
 }
