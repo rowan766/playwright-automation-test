@@ -10,10 +10,19 @@
     "report": "playwright show-report",
     "codegen": "playwright codegen"
   },
-  "keywords": ["playwright", "e2e", "testing", "automation"],
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "automation"
+  ],
   "author": "Purplegrape Reed",
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "^1.49.0"
+  },
+  "dependencies": {
+    "sharp": "^0.34.5",
+    "tesseract.js": "^7.0.0"
   }
 }

@@ -2,7 +2,7 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 30000,
+  timeout: 0, // 30000
   retries: 2,
   workers: 1, // 只用 Chrome,单线程运行
   

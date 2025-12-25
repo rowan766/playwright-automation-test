@@ -1,0 +1,726 @@
+{
+  "config": {
+    "configFile": "D:\\workspace_study_pro\\playwright-automation-test\\playwright.config.ts",
+    "rootDir": "D:/workspace_study_pro/playwright-automation-test/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/workspace_study_pro/playwright-automation-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/workspace_study_pro/playwright-automation-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "glyh-system.spec.ts",
+      "file": "glyh-system.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "公路养护系统测试",
+          "file": "glyh-system.spec.ts",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "登录功能测试-自动识别验证码",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11911,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"sr 7q\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"sr7q\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: sr7q\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:43:37.825Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-登录功能测试-自动识别验证码-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-8ca6a702070dfe52c735",
+              "file": "glyh-system.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "地图图例交互测试",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7565,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"tr 4f\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"tr4f\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: tr4f\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        },
+                        {
+                          "text": "✅ 地图图例交互成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:43:51.476Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-地图图例交互测试-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-a628a306e405c8540d8f",
+              "file": "glyh-system.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "资产管理-路线信息查看",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 13900,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"Z UUme\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"zuume\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: zuume\n"
+                        },
+                        {
+                          "text": "❌ 第 1 次尝试失败,验证码可能识别错误\n"
+                        },
+                        {
+                          "text": "🔐 第 2 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"2axi4\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"2axi4\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: 2axi4\n"
+                        },
+                        {
+                          "text": "❌ 第 2 次尝试失败,验证码可能识别错误\n"
+                        },
+                        {
+                          "text": "🔐 第 3 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"y 7 di\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"y7di\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: y7di\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        },
+                        {
+                          "text": "✅ 路线信息页面加载成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:44:00.494Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-资产管理-路线信息查看-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-266b8ea70554d07ca7f0",
+              "file": "glyh-system.spec.ts",
+              "line": 45,
+              "column": 7
+            },
+            {
+              "title": "桥梁管理-查看详情",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 31452,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\workspace_study_pro\\playwright-automation-test\\tests\\glyh-system.spec.ts",
+                            "column": 16,
+                            "line": 60
+                          },
+                          "message": "Error: page.waitForSelector: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.el-table__body') to be visible\u001b[22m\n\u001b[2m    46 × locator resolved to 3 elements. Proceeding with the first one: <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"el-table__body\">…</table>\u001b[22m\n\n\n\u001b[0m \u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'menubar'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'div'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'资产情况'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 59 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'桥梁管理'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 60 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.el-table__body'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 61 |\u001b[39m     \n \u001b[90m 62 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.el-table__fixed-body-wrapper > .el-table__body > tbody > .el-table__row'\u001b[39m)\u001b[33m.\u001b[39mfirst()\n \u001b[90m 63 |\u001b[39m       \u001b[33m.\u001b[39mlocator(\u001b[32m'.view-btn-action'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\workspace_study_pro\\playwright-automation-test\\tests\\glyh-system.spec.ts:60:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"vdj z\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"vdjz\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: vdjz\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:44:15.426Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-桥梁管理-查看详情-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-桥梁管理-查看详情-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-桥梁管理-查看详情-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-桥梁管理-查看详情-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-b127c464dd6ec063a754",
+              "file": "glyh-system.spec.ts",
+              "line": 55,
+              "column": 7
+            },
+            {
+              "title": "隧道管理-查看和操作",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 31285,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\workspace_study_pro\\playwright-automation-test\\tests\\glyh-system.spec.ts",
+                            "column": 16,
+                            "line": 76
+                          },
+                          "message": "Error: page.waitForSelector: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.el-table__body') to be visible\u001b[22m\n\u001b[2m    55 × locator resolved to 3 elements. Proceeding with the first one: <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"el-table__body\">…</table>\u001b[22m\n\n\n\u001b[0m \u001b[90m 74 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'menubar'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'div'\u001b[39m)\u001b[33m.\u001b[39mfilter({ hasText\u001b[33m:\u001b[39m \u001b[32m'资产情况'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 75 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'隧道管理'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 76 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'.el-table__body'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 77 |\u001b[39m     \n \u001b[90m 78 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.el-table__fixed-body-wrapper > .el-table__body > tbody > .el-table__row'\u001b[39m)\u001b[33m.\u001b[39mfirst()\n \u001b[90m 79 |\u001b[39m       \u001b[33m.\u001b[39mlocator(\u001b[32m'.view-btn-action'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\workspace_study_pro\\playwright-automation-test\\tests\\glyh-system.spec.ts:76:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"dukd\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"dukd\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: dukd\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:44:48.861Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-隧道管理-查看和操作-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-隧道管理-查看和操作-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-隧道管理-查看和操作-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-隧道管理-查看和操作-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-1216b00c041c2d7c0778",
+              "file": "glyh-system.spec.ts",
+              "line": 71,
+              "column": 7
+            },
+            {
+              "title": "附属设施管理-菜单导航",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 31150,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "D:\\workspace_study_pro\\playwright-automation-test\\tests\\glyh-system.spec.ts",
+                            "column": 58,
+                            "line": 92
+                          },
+                          "message": "Error: locator.click: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('menuitem', { name: '附属设施管理' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 90 |\u001b[39m     \u001b[36mawait\u001b[39m loginWithOCR(page)\u001b[33m;\u001b[39m\n \u001b[90m 91 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'menuitem'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'附属设施管理'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByText(\u001b[32m'交安设施'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 95 |\u001b[39m     \u001b[0m\n\u001b[2m    at D:\\workspace_study_pro\\playwright-automation-test\\tests\\glyh-system.spec.ts:92:58\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"wy m2\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"wym2\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: wym2\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:45:22.259Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-附属设施管理-菜单导航-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-附属设施管理-菜单导航-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-附属设施管理-菜单导航-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-附属设施管理-菜单导航-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-726961183050952e309a",
+              "file": "glyh-system.spec.ts",
+              "line": 89,
+              "column": 7
+            },
+            {
+              "title": "巡查养护-完整流程",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12365,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"y3vg\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"y3vg\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: y3vg\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        },
+                        {
+                          "text": "✅ 巡查养护流程测试成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:45:55.400Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-巡查养护-完整流程-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-1888e195a39c895d6e5c",
+              "file": "glyh-system.spec.ts",
+              "line": 102,
+              "column": 7
+            },
+            {
+              "title": "桥梁巡查-检查类型切换",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9850,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "🔐 第 1 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"9yvyh\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"9yvyh\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: 9yvyh\n"
+                        },
+                        {
+                          "text": "❌ 第 1 次尝试失败,验证码可能识别错误\n"
+                        },
+                        {
+                          "text": "🔐 第 2 次登录尝试...\n"
+                        },
+                        {
+                          "text": "🔍 正在识别验证码...\n"
+                        },
+                        {
+                          "text": "🔍 OCR 原始识别: \"c 2 bx\n\"\n"
+                        },
+                        {
+                          "text": "✅ 清理后结果: \"c2bx\"\n"
+                        },
+                        {
+                          "text": "✍️  填写验证码: c2bx\n"
+                        },
+                        {
+                          "text": "✅ 登录成功\n"
+                        },
+                        {
+                          "text": "✅ 桥梁巡查检查类型切换成功\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-12-25T09:46:08.912Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "D:\\workspace_study_pro\\playwright-automation-test\\test-results\\glyh-system-公路养护系统测试-桥梁巡查-检查类型切换-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "434788410c0ef9da2aaf-cb58f7ff8f38a6cd4b02",
+              "file": "glyh-system.spec.ts",
+              "line": 119,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-12-25T09:43:36.388Z",
+    "duration": 163412.172,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
